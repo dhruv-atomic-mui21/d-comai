@@ -1,8 +1,8 @@
 const stats = [
-  { value: '100+', label: 'Projects Delivered' },
-  { value: '50+', label: 'Happy Clients' },
-  { value: '15+', label: 'AI Specialists' },
-  { value: '99%', label: 'Client Satisfaction' }
+  { value: '150+', label: 'Projects Delivered' },
+  { value: '80+', label: 'Enterprise Clients' },
+  { value: '25+', label: 'Team Experts' },
+  { value: '99.9%', label: 'Uptime Guarantee' }
 ];
 
 export default function Stats() {
@@ -13,10 +13,10 @@ export default function Stats() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Trusted by Industry Leaders
+            Numbers That Speak for Themselves
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Delivering excellence in AI solutions with measurable impact
+            Trusted by enterprises worldwide for AI, web development, and security solutions
           </p>
         </div>
 

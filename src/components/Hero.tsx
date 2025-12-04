@@ -1,12 +1,32 @@
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { FloatingOrb, ParticleField, AnimatedBox } from './Scene3D';
 
 export default function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(239,68,68,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(239,68,68,0.08),transparent_50%)]"></div>
+    <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden h-screen">
+      <div className="absolute inset-0">
+        <Canvas>
+          <PerspectiveCamera makeDefault position={[0, 0, 10]} />
+          <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
+          <ambientLight intensity={0.5} />
+          <pointLight position={[10, 10, 10]} intensity={1} />
+          <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ef4444" />
+
+          <FloatingOrb position={[-3, 2, -2]} color="#ef4444" speed={0.8} />
+          <FloatingOrb position={[4, -1, -3]} color="#dc2626" speed={1.2} />
+          <FloatingOrb position={[0, 3, -5]} color="#f87171" speed={1} />
+
+          <AnimatedBox position={[-5, -2, -4]} />
+          <AnimatedBox position={[5, 2, -6]} />
+
+          <ParticleField />
+        </Canvas>
+      </div>
 
       <nav className="relative z-10 container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
@@ -50,20 +70,20 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-            Transform Your Business with AI Innovation
+            Enterprise Solutions for the Digital Age
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-            Leading AI consultancy delivering cutting-edge web solutions, intelligent software, and transformative tools to propel your business into the future.
+            Specializing in AI Solutions, Contract-Based Web Development, and Comprehensive Security Services to protect and scale your business.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="group bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-lg shadow-red-500/20">
-              Start Your AI Journey
+              Get Started
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </button>
             <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-white/20">
-              View Our Work
+              Explore Services
             </button>
           </div>
         </div>

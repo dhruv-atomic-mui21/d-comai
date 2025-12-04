@@ -10,10 +10,10 @@ export default function CTA() {
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Your Business with AI?
+                Ready to Elevate Your Digital Presence?
               </h2>
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                Let's discuss how our AI solutions can help you achieve your goals. Schedule a free consultation with our experts today.
+                Whether you need AI solutions, custom web development, or comprehensive security services, our team of experts is ready to help. Schedule a free consultation to discuss your project.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
