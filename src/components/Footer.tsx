@@ -1,5 +1,4 @@
 import { Github, Linkedin, Twitter, Globe } from 'lucide-react';
-import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -7,10 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Logo className="h-10 w-10" />
-              <span className="font-orbitron font-black text-sm bg-gradient-to-br from-red-400 to-red-600 bg-clip-text text-transparent">D_COM AI</span>
-            </div>
+            <img src="/image.png" alt="D COM AI" className="h-10 w-auto mb-4" />
             <p className="text-gray-400 leading-relaxed max-w-md">
               Building a better world with AI. We deliver innovative solutions that transform businesses and drive meaningful impact.
             </p>
