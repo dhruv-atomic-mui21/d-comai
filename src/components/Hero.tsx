@@ -1,6 +1,5 @@
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import Logo from './Logo';
 
 export default function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +10,8 @@ export default function Hero() {
 
       <nav className="relative z-10 container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Logo className="h-12 w-12" />
-            <div className="flex flex-col">
-              <span className="font-orbitron font-black text-lg leading-none bg-gradient-to-br from-red-400 to-red-600 bg-clip-text text-transparent">D_COM AI</span>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img src="/image.png" alt="D COM AI" className="h-12 w-auto" />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
